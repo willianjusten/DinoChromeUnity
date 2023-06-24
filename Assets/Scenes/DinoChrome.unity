@@ -521,3 +521,64 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2003247056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2003247058}
+  - component: {fileID: 2003247059}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2003247058
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003247056}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2003247059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003247056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d267a4e7137784458d5a3ff80ba6f11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - prefab: {fileID: 6235139727985952337, guid: 62eda8b59bc87134a9f5c1da2ddfe61f, type: 3}
+    spawnChance: 0.202
+  - prefab: {fileID: 3729015979450292003, guid: 66cd66dee6d70c44a90cd6a76beef8e5, type: 3}
+    spawnChance: 0.182
+  - prefab: {fileID: 8542583398116297390, guid: cec70961d5cca324a927a65c6fa48b7d, type: 3}
+    spawnChance: 0.166
+  - prefab: {fileID: 3045058121828649827, guid: 5bd8fa2f0a8df26479cee68fecae5f89, type: 3}
+    spawnChance: 0.142
+  - prefab: {fileID: 3175267425911203857, guid: eefe5c7e0c82f6e4182d113ec4096026, type: 3}
+    spawnChance: 0.126
+  - prefab: {fileID: 6752286683620521146, guid: 187518bb6e9c30f478463d40bcd1e560, type: 3}
+    spawnChance: 0.106
+  - prefab: {fileID: 392399049886497714, guid: d5f9ec548ae1d9548b316f9e2507998a, type: 3}
+    spawnChance: 0.056
+  minSpawnRate: 1
+  maxSpawnRate: 2

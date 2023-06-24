@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4443037435835633775}
   - component: {fileID: 7340100221456293175}
   - component: {fileID: 8401321036896948453}
+  - component: {fileID: 1958482580698851482}
   m_Layer: 0
   m_Name: Cactus_Small_Doube
   m_TagString: Obstacle
@@ -106,3 +107,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7083333, y: 0.75, z: 0.2}
   m_Center: {x: 0, y: -0.14, z: 0}
+--- !u!114 &1958482580698851482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8542583398116297390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c2d7c03386e0d4ba1a491f7bed59bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
