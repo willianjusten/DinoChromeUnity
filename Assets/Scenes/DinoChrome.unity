@@ -504,7 +504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6324988f4c92c4c4784fcb44b01bbc72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialGameSpeed: 5
+  initialGameSpeed: 8
   gameSpeedIncrease: 0.1
 --- !u!4 &587385152
 Transform:
