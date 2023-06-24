@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI hiScoreText;
     public Button retryButton;
 
+    [SerializeField] public AudioSource pointSound;
+    [SerializeField] public AudioSource dieSound;
+
     private Player player;
     private Spawner spawner;
 
@@ -71,6 +74,8 @@ public class GameManager : MonoBehaviour
         gameOverText.gameObject.SetActive(true);
         retryButton.gameObject.SetActive(true);
 
+        dieSound.Play();
+
         UpdateHiScore();
     }
 
@@ -80,6 +85,14 @@ public class GameManager : MonoBehaviour
 
         // pad to always have 5 digits
         scoreText.text = Mathf.FloorToInt(score).ToString("D5");
+        
+        PointSound();
+    }
+
+    private void PointSound() {
+        if (score > 0 && Mathf.FloorToInt(score) % 100 == 0) {
+            pointSound.Play();
+        }
     }
 
     private void UpdateHiScore() {

@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     public float gravity = 9.81f * 2f;
     public float jumpForce = 8f;
 
+    [SerializeField] private AudioSource jumpSound;
+    
     private void Awake() {
         character = GetComponent<CharacterController>();
     }
@@ -24,6 +26,7 @@ public class Player : MonoBehaviour
 
             if (Input.GetButton("Jump") || Input.GetKey(KeyCode.UpArrow)) {
                 direction = Vector3.up * jumpForce;
+                jumpSound.Play();
             }
         }
 
