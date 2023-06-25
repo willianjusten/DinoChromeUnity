@@ -15,8 +15,9 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI hiScoreText;
     public Button retryButton;
 
-    [SerializeField] public AudioSource pointSound;
-    [SerializeField] public AudioSource dieSound;
+    [SerializeField] public AudioClip pointSound;
+    [SerializeField] public AudioClip dieSound;
+    AudioSource audioSource;
 
     private Player player;
     private Spawner spawner;
@@ -40,6 +41,8 @@ public class GameManager : MonoBehaviour
     private void Start() {
         player = FindObjectOfType<Player>();
         spawner = FindObjectOfType<Spawner>();
+
+        audioSource = GetComponent<AudioSource>();
 
         NewGame();
     }
@@ -74,7 +77,7 @@ public class GameManager : MonoBehaviour
         gameOverText.gameObject.SetActive(true);
         retryButton.gameObject.SetActive(true);
 
-        dieSound.Play();
+        audioSource.PlayOneShot(dieSound);
 
         UpdateHiScore();
     }
@@ -90,8 +93,10 @@ public class GameManager : MonoBehaviour
     }
 
     private void PointSound() {
-        if (score > 0 && Mathf.FloorToInt(score) % 100 == 0) {
-            pointSound.Play();
+        int roundedScore = Mathf.FloorToInt(score);
+        
+        if (roundedScore > 0 && roundedScore % 100 == 0) {
+            audioSource.PlayOneShot(pointSound);
         }
     }
 
