@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void NewGame() {
-        Obstacle[] obstacles = FindObjectsOfType<Obstacle>();
+        GameObject[] obstacles = GameObject.FindGameObjectsWithTag("Obstacle");
 
         foreach(var obstacle in obstacles) {
             Destroy(obstacle.gameObject);
