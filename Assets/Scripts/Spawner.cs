@@ -9,10 +9,10 @@ public class Spawner : MonoBehaviour
         public float spawnChance;
     }
 
-    public SpawnableObject[] objects;
+    [SerializeField] private SpawnableObject[] objects;
 
-    public float minSpawnRate = 1f;
-    public float maxSpawnRate = 2f;
+    [SerializeField] private float minSpawnRate = 1f;
+    [SerializeField] private float maxSpawnRate = 2f;
 
     private void OnEnable() {
         Invoke(nameof(Spawn), Random.Range(minSpawnRate, maxSpawnRate));

@@ -6,21 +6,21 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    public float initialGameSpeed = 5f;
-    public float gameSpeedIncrease = 0.1f;
+    [SerializeField] private float initialGameSpeed = 5f;
+    [SerializeField] private float gameSpeedIncrease = 0.1f;
     public float gameSpeed { get; private set; }
 
-    public TextMeshProUGUI gameOverText;
-    public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI hiScoreText;
-    public Button retryButton;
+    [SerializeField] private TextMeshProUGUI gameOverText;
+    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI hiScoreText;
+    [SerializeField] private Button retryButton;
 
-    [SerializeField] public AudioClip pointSound;
-    [SerializeField] public AudioClip dieSound;
+    [SerializeField] private AudioClip pointSound;
+    [SerializeField] private AudioClip dieSound;
     AudioSource audioSource;
 
-    private Player player;
-    private Spawner spawner;
+    [SerializeField] private Player player;
+    [SerializeField] private Spawner spawner;
 
     private float score;
 
@@ -39,11 +39,7 @@ public class GameManager : MonoBehaviour
     }
 
     private void Start() {
-        player = FindObjectOfType<Player>();
-        spawner = FindObjectOfType<Spawner>();
-
         audioSource = GetComponent<AudioSource>();
-
         NewGame();
     }
 
@@ -96,7 +92,7 @@ public class GameManager : MonoBehaviour
         int roundedScore = Mathf.FloorToInt(score);
         
         if (roundedScore > 0 && roundedScore % 100 == 0) {
-            audioSource.PlayOneShot(pointSound);
+            audioSource.PlayOneShot(pointSound, 0.05f);
         }
     }
 

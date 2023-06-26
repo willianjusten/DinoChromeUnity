@@ -5,8 +5,8 @@ public class Player : MonoBehaviour
     private CharacterController character;
     private Vector3 direction;
 
-    public float gravity = 9.81f * 2f;
-    public float jumpForce = 8f;
+    [SerializeField] private float gravity = 9.81f * 2f;
+    [SerializeField] private float jumpForce = 8f;
 
     [SerializeField] private AudioSource jumpSound;
     

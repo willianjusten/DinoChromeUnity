@@ -1016,6 +1016,8 @@ MonoBehaviour:
   retryButton: {fileID: 1515350419}
   pointSound: {fileID: 8300000, guid: 945159b8f49e6ec48a02d3a985fce866, type: 3}
   dieSound: {fileID: 8300000, guid: 997d16093e31325499addd442769ac49, type: 3}
+  player: {fileID: 367393842}
+  spawner: {fileID: 2003247059}
 --- !u!4 &587385152
 Transform:
   m_ObjectHideFlags: 0

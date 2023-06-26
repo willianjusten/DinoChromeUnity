@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AnimatedSprite : MonoBehaviour
 {
-    public Sprite[] sprites;
+    [SerializeField] private Sprite[] sprites;
 
     private SpriteRenderer spriteRenderer;
     private int frame;
